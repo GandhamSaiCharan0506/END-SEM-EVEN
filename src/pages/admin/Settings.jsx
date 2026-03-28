@@ -6,7 +6,7 @@ export default function Settings() {
 
   /* ===== LOAD SETTINGS ===== */
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("theme") || "light";
     const savedAnim = localStorage.getItem("animations") !== "false";
 
     setTheme(savedTheme);

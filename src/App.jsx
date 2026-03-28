@@ -38,7 +38,9 @@ function ProtectedRoute({ role, children }) {
   const current = getRole();
   return current === role ? children : <Navigate to="/" />;
 }
-
+if (!localStorage.getItem("theme")) {
+  localStorage.setItem("theme", "light");
+}
 export default function App() {
   return (
     <BrowserRouter>
@@ -93,6 +95,8 @@ export default function App() {
 
         {/* ===== FALLBACK ===== */}
         <Route path="*" element={<Navigate to="/" />} />
+
+        
 
       </Routes>
     </BrowserRouter>
