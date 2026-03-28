@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Settings() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [animations, setAnimations] = useState(true);
 
   /* ===== LOAD SETTINGS ===== */
